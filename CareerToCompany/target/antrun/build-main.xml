@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo>deploying to server Server01</echo>
+  <taskdef classname="org.apache.tools.ant.taskdefs.optional.ssh.Scp" name="scp"/>
+  <scp trust="true" file="target/LoadViewDream-1.1.0.jar" todir="hadoop:hadoop@server01:/home/hadoop/hadoop-2.7.3" verbose="true"/>
+</target>
+</project>
